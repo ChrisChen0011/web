@@ -1,0 +1,16 @@
+{% extends "home.html" %}
+
+{% load custom_tags %}
+
+    
+
+{% block tag1 %}
+    <h1>=====</h1>
+    {% for word in words %}
+    {{word}}
+    {{ word|capitalize_first_letter }}
+    {% endfor %}
+    <h1>====</h1>
+{% endblock tag1 %}
+    
+

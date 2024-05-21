@@ -1,0 +1,58 @@
+<!-- blog_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog Posts</title>
+    {% load static %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.2/bootbox.min.js"></script>>
+</head>
+<body>
+    {% block tag1 %}
+        
+    {% load custom_tags %}
+    {% endblock tag1 %}
+        
+    <form action="/test/" method="post">
+        <input type="text" id="input1">
+        <button type="submit">submit </button>
+
+    </form>
+
+    <h1>test</h1>
+    <div class="content">
+        {% block content %}
+        <!-- Content will be injected here -->
+        {% endblock %}
+    </div>
+    <h1>Blog Posts</h1>
+    <ul>
+        {% for post in data %}
+            <li>
+                <h2>{{ post }}</h2>
+            </li>
+        {% empty %}
+            <li>No posts available.</li>
+        {% endfor %}
+    </ul>
+    <button type="button" id="chrisButton" >Click Me</button>
+    <p>This is another paragraph.</p>
+    <button id="hideButton">隱藏</button>
+    <button class="alert">show alert</button>
+    <script src="{% static 'script.js' %}"></script>
+    
+    {% block myPlace %}
+        
+    {% endblock myPlace %}
+        
+    
+    {% block in %}
+        
+    {% endblock in %}
+        
+    
+</body>
+</html>
