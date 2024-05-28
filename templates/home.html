@@ -1,58 +1,126 @@
-<!-- blog_list.html -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog Posts</title>
     {% load static %}
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}" />
+
+    <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.2/bootbox.min.js"></script>>
-</head>
-<body>
-    {% block tag1 %}
-        
-    {% load custom_tags %}
-    {% endblock tag1 %}
-        
-    <form action="/test/" method="post">
-        <input type="text" id="input1">
-        <button type="submit">submit </button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.2/bootbox.min.js"></script>
+  </head>
+  <body>
+    <p>qwe</p>
+    <button class="button">hover me!</button>
+    <div class="containerfluid"></div>
 
-    </form>
-
-    <h1>test</h1>
-    <div class="content">
-        {% block content %}
-        <!-- Content will be injected here -->
-        {% endblock %}
+    <div class="container">
+      <div class="row justify-content-start">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="text">
+            <img src="https://picsum.photos/id/300/200/100" alt="" />
+            ipsum dolor sit amet consectetur, adipisicing elit. Culpa, nulla
+            numquam, doloribus officiis repudiandae explicabo, impedit
+            consectetur est facere illo tenetur nisi. Recusandae saepe nostrum
+            possimus quisquam ipsa ut vitae!
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="text">
+            <img src="https://picsum.photos/id/300/200/100" alt="" />
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa,
+            nulla numquam, doloribus officiis repudiandae explicabo, impedit
+            consectetur est facere illo tenetur nisi. Recusandae saepe nostrum
+            possimus quisquam ipsa ut vitae!
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="text">
+            <img src="https://picsum.photos/id/300/200/100" alt="" />
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel,
+            impedit dolorem molestias nobis ipsam alias cum optio quod,
+            voluptates voluptatibus praesentium doloremque, temporibus
+            perferendis esse ab consequatur in est recusandae.
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="text">
+            <img src="https://picsum.photos/id/300/200/100" alt="" />
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
+            dolore minus earum dolores sint nihil consequuntur quos corporis
+            sequi nostrum aliquam hic saepe atque rerum repellat dicta, sed
+            dolorem doloremque.
+          </div>
+        </div>
+      </div>
     </div>
-    <h1>Blog Posts</h1>
-    <ul>
-        {% for post in data %}
-            <li>
-                <h2>{{ post }}</h2>
-            </li>
-        {% empty %}
-            <li>No posts available.</li>
-        {% endfor %}
-    </ul>
-    <button type="button" id="chrisButton" >Click Me</button>
-    <p>This is another paragraph.</p>
-    <button id="hideButton">隱藏</button>
-    <button class="alert">show alert</button>
-    <script src="{% static 'script.js' %}"></script>
-    
-    {% block myPlace %}
-        
-    {% endblock myPlace %}
-        
-    
-    {% block in %}
-        
-    {% endblock in %}
-        
-    
-</body>
+
+
+
+    <div class="container " style="margin-top: 50px; padding-left: 10px;">
+      <div class="row">
+        <div class="col-4">
+          <div class="card h-100" style="width: 18rem">
+            <img src="https://picsum.photos/id/684/600/400" alt="" />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aliquam dolore corrupti optio non quibusdam repudiandae, nihil
+                quasi quaerat laboriosam sed rerum error tempore modi eos
+                molestias quo! Nulla, libero placeat!
+              </p>
+              <a href="#" class="btn btn-primary align-self-end"
+                >Go somewhere</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card h-100" style="width: 18rem">
+            <img src="https://picsum.photos/id/684/600/400" alt="" />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                sed inventore excepturi mollitia tempora numquam? Iusto quidem
+                amet rem unde.
+              </p>
+              <a href="#" class="btn btn-primary align-self-end"
+                >Go somewhere</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card h-100" style="width: 18rem">
+            <img src="https://picsum.photos/id/684/600/400" alt="" />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary align-self-end"
+                >Go somewhere</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="{% static 'scripts.js' %}"></script>
+  </body>
 </html>
+`
